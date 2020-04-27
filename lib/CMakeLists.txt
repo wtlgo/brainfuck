@@ -4,6 +4,7 @@ project(bf-lib VERSION 0.0.1)
 add_library(bf-lib 
     src/bf.cpp 
     src/AST.cpp
+    src/tokenizer.cpp
 )
 target_compile_features(bf-lib PUBLIC cxx_std_11)
 target_include_directories(bf-lib PRIVATE include/private include/public/wtlgo)

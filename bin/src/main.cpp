@@ -1,6 +1,17 @@
 #include <iostream>
+#include <string>
+
+#include <wtlgo/bf.hpp>
 
 int main(int argv, const char* argc[]) {
-    std::cout << argc[0] << std::endl;
+    std::string bf = R"(
+        +- // -+
+        /*
+            -+
+        */
+        +-
+    )";
+    
+    
     return 0;
 }

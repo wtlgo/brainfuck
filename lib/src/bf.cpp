@@ -3,6 +3,6 @@
 #include <bf.hpp>
 #include <AST.hpp>
 
-wtlgo::bf::Interpreter::Interpreter(const std::string& input) {
+wtlgo::bf::Interpreter::Interpreter(const std::string& input, uint64_t opt) {
 
 }
