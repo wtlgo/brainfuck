@@ -1,4 +1,6 @@
 #include <algorithm>
+
+#include <bf.hpp>
 #include <tape.hpp>
 
 /* Basic Tape */
@@ -80,4 +82,20 @@ void InfiniteWrappingTape::move(int64_t dir) {
             }
         }
     }
+}
+
+/* Tape Generator */
+std::unique_ptr<BasicTape> TapeGenerator::generate(int64_t opt) {
+    using namespace wtlgo::bf;
+    uint8_t var = (opt & WRAPPING_TAPE) * 2 + (opt & INFINITE_TAPE);
+    switch (var) {
+        case true  * 2 + true : return std::make_unique<InfiniteWrappingTape>(opt);
+        case true  * 2 + false: return std::make_unique<WrappingTape>(opt);
+        case false * 2 + true : return std::make_unique<InfiniteTape>(opt);
+        case false * 2 + false: return std::make_unique<StandardTape>(opt);
+    
+        default: throw std::runtime_error("Runtime Error: Unknown tape type");
+    }
+
+    return nullptr; 
 }

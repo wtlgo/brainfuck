@@ -51,4 +51,8 @@ class InfiniteWrappingTape : public InfiniteTape {
     virtual void move(int64_t);
 };
 
+struct TapeGenerator {
+    static std::unique_ptr<BasicTape> generate(int64_t opt = 0);
+};
+
 #endif
