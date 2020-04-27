@@ -8,7 +8,7 @@
 int64_t Cell::max() const { return std::numeric_limits<uint8_t>::max(); }
 int64_t Cell::min() const { return std::numeric_limits<uint8_t>::min(); }
 
-int64_t Cell::get() const {
+int64_t& Cell::get() {
     return val;
 }
 

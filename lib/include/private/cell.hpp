@@ -15,7 +15,7 @@ struct Cell {
     virtual int64_t max() const;
     virtual int64_t min() const;
 
-    virtual int64_t get() const;
+    virtual int64_t& get();
     virtual void add(int64_t);
 
 protected:

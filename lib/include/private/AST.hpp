@@ -4,6 +4,8 @@
 #include <memory>
 #include <list>
 
+#include <VM.hpp>
+
 namespace wtlgo {
 namespace bf {
 
@@ -12,7 +14,7 @@ struct AST {
     typedef std::shared_ptr<const AST> const_ptr_t;
 
     virtual ~AST() = default;
-    //virtual void compute(VM&) const = 0;
+    virtual void compute(VM&) const = 0;
 };
 
 struct ASTBody : public AST {
@@ -22,35 +24,35 @@ struct ASTBody : public AST {
     const body_t body;
 
     ASTBody(body_t&&); 
-    //virtual void compute(VM&) const;
+    virtual void compute(VM&) const;
 };
 
 struct ASTAdd : public AST {
     const int64_t val;
 
     ASTAdd(int64_t);
-    //virtual void compute(VM&) const;
+    virtual void compute(VM&) const;
 };
 
 struct ASTMov : public AST {
     const int64_t step;
 
     ASTMov(int64_t);
-    //virtual void compute(VM&) const;
+    virtual void compute(VM&) const;
 };
 
 struct ASTLoop : public ASTBody {
     ASTLoop(body_t&&);
     ASTLoop(const ASTBody&);
-    //virtual void compute(VM&) const;
+    virtual void compute(VM&) const;
 };
 
 struct ASTPrint : public AST {
-    //virtual void compute(VM&) const;
+    virtual void compute(VM&) const;
 };
 
 struct ASTRead : public AST {
-    //virtual void compute(VM&) const;
+    virtual void compute(VM&) const;
 };
 
 }
