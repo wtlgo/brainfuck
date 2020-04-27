@@ -13,7 +13,9 @@ enum ParserOptions {
 
 enum RuntimeOptions {
     NON_WRAPPING_CELLS = 0b1,
-    SIGNED_CELLS       = 0b10
+    SIGNED_CELLS       = 0b10,
+    WRAPPING_TAPE      = 0b100,
+    INFINITE_TAPE      = 0b1000
 };
 
 struct AST;
