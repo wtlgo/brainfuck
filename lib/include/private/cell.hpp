@@ -1,7 +1,7 @@
 #ifndef _CELL_
 #define _CELL_
 
-#include <cstdlib>
+#include <memory>
 
 /*
     Default cell
@@ -53,6 +53,16 @@ struct SignedCell : public Cell {
 struct NonWrappingSignedCell : public NonWrappingCell {
     virtual int64_t max() const;
     virtual int64_t min() const;
+};
+
+/*
+    Fabric method
+*/
+struct CellGenerator {
+    int64_t opt;
+    CellGenerator(int64_t opt = 0);
+
+    std::unique_ptr<Cell> operator()() const;
 };
 
 #endif

@@ -1,5 +1,7 @@
 #include <limits>
 #include <stdexcept>
+
+#include <bf.hpp>
 #include <cell.hpp>
 
 /* Default Cell */
@@ -30,3 +32,21 @@ int64_t SignedCell::min() const { return std::numeric_limits<int8_t>::min(); }
 /* Non Wrapping Signed Cell */
 int64_t NonWrappingSignedCell::max() const { return std::numeric_limits<int8_t>::max(); }
 int64_t NonWrappingSignedCell::min() const { return std::numeric_limits<int8_t>::min(); }
+
+/* Cell Generator */
+CellGenerator::CellGenerator(int64_t opt) : opt { opt } {}
+
+std::unique_ptr<Cell> CellGenerator::operator()() const {
+    using namespace wtlgo::bf;
+    uint8_t ver = (opt & NON_WRAPPING_CELLS) * 2 + (opt & SIGNED_CELLS);
+    switch (ver) {
+        case true  * 2 + true : return std::make_unique<NonWrappingSignedCell>();
+        case false * 2 + true : return std::make_unique<SignedCell>();
+        case true  * 2 + false: return std::make_unique<NonWrappingCell>();
+        case false * 2 + false: return std::make_unique<Cell>();
+
+        default: throw std::runtime_error("Runtime Error: Unknown cell type.");
+    }
+
+    return nullptr;
+}
