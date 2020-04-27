@@ -5,8 +5,9 @@ add_library(bf-lib
     src/bf.cpp 
     src/AST.cpp
     src/tokenizer.cpp
+    src/parser.cpp
 )
-target_compile_features(bf-lib PUBLIC cxx_std_11)
+target_compile_features(bf-lib PUBLIC cxx_std_14)
 target_include_directories(bf-lib PRIVATE include/private include/public/wtlgo)
 target_include_directories(bf-lib INTERFACE include/public)
 

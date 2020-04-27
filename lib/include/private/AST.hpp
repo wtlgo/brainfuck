@@ -41,14 +41,15 @@ struct ASTMov : public AST {
 
 struct ASTLoop : public ASTBody {
     ASTLoop(body_t&&);
+    ASTLoop(const ASTBody&);
     //virtual void compute(VM&) const;
 };
 
-struct ASTPrint {
+struct ASTPrint : public AST {
     //virtual void compute(VM&) const;
 };
 
-struct ASTRead {
+struct ASTRead : public AST {
     //virtual void compute(VM&) const;
 };
 
