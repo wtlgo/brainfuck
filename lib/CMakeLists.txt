@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.13)
-project(bf-lib VERSION 1.0.0)
+project(bf-lib VERSION 1.0.1)
 
 add_library(bf-lib 
     src/bf.cpp

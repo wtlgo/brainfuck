@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.13)
-project(brainfuck VERSION 1.0.0)
+project(brainfuck VERSION 1.0.2)
+
+add_definitions(-DBF_VERSION="${PROJECT_VERSION}")
 
 add_subdirectory(lib)
 add_subdirectory(bin)

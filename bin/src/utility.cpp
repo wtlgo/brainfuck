@@ -2,7 +2,7 @@
 
 std::string help() {
     return R"(
-Brainfuck interpreter by wtlgo
+Brainfuck interpreter v)" BF_VERSION R"( by wtlgo
 https://github.com/wtlgo/brainfuck.git
 
 Flags:
