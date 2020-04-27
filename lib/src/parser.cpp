@@ -1,3 +1,5 @@
+#include <algorithm>
+
 #include <parser.hpp>
 
 using namespace wtlgo::bf;
