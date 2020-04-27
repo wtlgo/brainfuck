@@ -7,6 +7,7 @@ add_library(bf-lib
     src/AST.cpp
     src/tokenizer.cpp
     src/parser.cpp
+    src/VM.cpp
 
     src/cell.cpp
     src/tape.cpp

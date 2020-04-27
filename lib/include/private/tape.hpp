@@ -32,6 +32,7 @@ public:
 
 class WrappingTape : public StandardTape {
 public:
+    WrappingTape(int64_t opt = 0);
     virtual void move(int64_t);
 };
 
@@ -48,6 +49,8 @@ public:
 };
 
 class InfiniteWrappingTape : public InfiniteTape {
+public:
+    InfiniteWrappingTape(int64_t opt = 0);
     virtual void move(int64_t);
 };
 

@@ -26,6 +26,8 @@ void StandardTape::move(int64_t dir) {
 }
 
 /* Wrapping Tape */
+WrappingTape::WrappingTape(int64_t opt) : StandardTape { opt } {}
+
 void WrappingTape::move(int64_t dir) {
     int64_t dist = std::distance(tape.begin(), it) + dir;
     while(dir < 0)
@@ -65,6 +67,8 @@ void InfiniteTape::move(int64_t dir) {
 }
 
 /* Infinite Wrapping Tape */
+InfiniteWrappingTape::InfiniteWrappingTape(int64_t opt) : InfiniteTape { opt } {}
+
 void InfiniteWrappingTape::move(int64_t dir) {
     if(dir > 0) {
         while(dir--) {
