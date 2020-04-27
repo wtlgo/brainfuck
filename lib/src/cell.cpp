@@ -14,7 +14,7 @@ int64_t& Cell::get() {
 
 void Cell::add(int64_t to) {
     val += to;
-    while(to < min()) val += max() - min() + 1;
+    while(val < min()) val += max() - min() + 1;
     val = (val - min()) % (max() - min() + 1) + min();
 }
 

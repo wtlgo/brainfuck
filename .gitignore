@@ -34,3 +34,6 @@
 # Folders
 .vscode
 build
+
+# Mac
+**/.DS_Store
