@@ -8,15 +8,14 @@
 namespace wtlgo {
 namespace bf {
 
-enum ParserOptions {
-    C_STYLE_COMMENTS = 0b1
-};
 
 enum RuntimeOptions {
     NON_WRAPPING_CELLS = 0b1,
     SIGNED_CELLS       = 0b10,
     WRAPPING_TAPE      = 0b100,
-    INFINITE_TAPE      = 0b1000
+    INFINITE_TAPE      = 0b1000,
+
+    C_STYLE_COMMENTS   = 0b10000
 };
 
 struct AST;
