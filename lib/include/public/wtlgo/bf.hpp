@@ -12,7 +12,7 @@ class Interpreter {
     Interpreter(const std::string&);
 
 private:
-    std::shared_ptr<AST> ast;
+    std::shared_ptr<const AST> ast;
 };
 
 }
