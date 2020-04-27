@@ -11,7 +11,7 @@ struct VM {
     std::ostream& out;
     std::istream& in;
 
-    VM(int64_t opt = 0, std::ostream& out = std::cout, std::istream& in = std::cin);
+    VM(uint64_t opt = 0, std::ostream& out = std::cout, std::istream& in = std::cin);
 };
 
 #endif

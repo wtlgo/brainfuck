@@ -2,6 +2,7 @@
 #define _WTLGO_BF_
 
 #include <memory>
+#include <iostream>
 #include <string>
 
 namespace wtlgo {
@@ -20,7 +21,11 @@ enum RuntimeOptions {
 
 struct AST;
 class Interpreter {
+public:
+    uint64_t opt;
     Interpreter(const std::string&, uint64_t opt = 0);
+
+    void compute(std::ostream& out = std::cout, std::istream& input = std::cin) const;
 
 private:
     std::shared_ptr<const AST> ast;
