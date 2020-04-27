@@ -43,6 +43,7 @@ Parser::parse_body(it_t begin, it_t end) {
             case REA:
             case OUT: {
                 auto next = parse_io(it, end);
+                if(!next.first) return NOTHING;
 
                 res.push_back(next.first);
                 it = next.second;
@@ -51,6 +52,7 @@ Parser::parse_body(it_t begin, it_t end) {
 
             case LPS: {
                 auto next = parse_loop(it, end);
+                if(!next.first) return NOTHING;
 
                 res.push_back(next.first);
                 it = next.second;
