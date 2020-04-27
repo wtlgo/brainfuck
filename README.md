@@ -5,7 +5,7 @@
 ## Requirements
 
 - CMake >= 3.12
-- C++11 compatible compiler
+- C++14 compatible compiler
 - git
 
 ## How to build
@@ -24,6 +24,7 @@ $ cmake --install .
 $ ./bf --help
 
 Brainfuck interpreter by wtlgo
+https://github.com/wtlgo/brainfuck.git
 
 Flags:
     -s [filename]       Specify source file.

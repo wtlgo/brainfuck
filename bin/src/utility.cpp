@@ -3,6 +3,7 @@
 std::string help() {
     return R"(
 Brainfuck interpreter by wtlgo
+https://github.com/wtlgo/brainfuck.git
 
 Flags:
     -s [filename]       Specify source file.
