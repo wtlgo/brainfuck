@@ -1,5 +1,6 @@
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/wtlgo/brainfuck.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/wtlgo/brainfuck/alerts/)
 [![Language grade: C/C++](https://img.shields.io/lgtm/grade/cpp/g/wtlgo/brainfuck.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/wtlgo/brainfuck/context:cpp)
+[![Lines of Code](https://tokei.rs/b1/github/wtlgo/brainfuck?category=code)](https://github.com/XAMPPRocky/tokei)
 
 
 # Brainfuck interpreter
